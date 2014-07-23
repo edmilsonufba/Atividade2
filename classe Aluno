@@ -1,0 +1,16 @@
+class Aluno {
+public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public int getNum_matricula() {
+		return Num_matricula;
+	}
+	public void setNum_matricula(int num_matricula) {
+		Num_matricula = num_matricula;
+	}
+String nome;
+int Num_matricula;
+}
