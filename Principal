@@ -1,0 +1,47 @@
+import java.util.Scanner;
+ 
+public class principal {   
+  
+    private static Scanner ler;
+
+	public static void main (String[] args) { 
+    	ler = new Scanner(System.in);
+    	
+    	Aluno novo_Aluno ;
+		novo_Aluno = new Aluno();
+		System.out.printf("Nome do aluno:\n");
+		novo_Aluno.nome = ler.next();
+		System.out.printf("Numero de matricula:\n");
+		novo_Aluno.Num_matricula = ler.nextInt();
+		 
+		int cont  = 0;
+		double total_nota = 0;	
+		double  media;
+		while (cont < 6) {
+			int nota = 0 ;
+			System.out.printf("digite a nota");
+			nota = ler.nextInt();
+			total_nota = (total_nota+ nota);
+		   cont = cont + 1;
+		}
+		media =( total_nota/ 6); 
+		if (media> 6.9){
+			System.out.println("aprovado \n");
+			}
+		else{
+			  if (media>3.9){
+			      System.out.println("Depende de prova final \n");
+			  }
+			      else {
+			    	  System.out.println("reprovado \n");
+			      }
+		}
+		System.out.printf("Nome do aluno  :");
+		System.out.printf(novo_Aluno.nome);
+		System.out.printf("\n Matricula  :");
+		System.out.print(novo_Aluno.Num_matricula);
+		System.out.printf("\n media  :" + media);
+		
+    }   
+  
+}  
